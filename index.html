@@ -6,24 +6,13 @@
     <title>LOKUL</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="js/main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
         <header>
-            <div id="btn-toggle-nav" onclick="sidebar()">
-                <p></p>
-                <p></p>
-                <p></p>
-            </div>
-            <nav id="sidebar">
-                <ul>
-                    <li><a href="#" onclick="sidebar()">Home</a></li>
-                    <li><a href="#" onclick="sidebar()">About</a></li>
-                    <li><a href="#" onclick="sidebar()">Gallery</a></li>
-                    <li><a href="#" onclick="sidebar()">Contact</a></li>
-                </ul>
-            </nav>
             <nav class="navbar">
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -32,6 +21,27 @@
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Meet the Team</a></li>
                 </ul>
+            </nav>
+            <div class="btn-toggle-nav" onclick="sidebar()">
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+            <nav id="sidebar">
+                <ul>
+                    <img src="images/caps/white-cap.png" alt="">
+                    <i class="fas fa-times" onclick="sidebar()"></i>
+                    <li onclick="sidebar()"><a href="#" onclick="menu()">Young and Lazy</a></li>
+                    <li><a href="#" onclick="sidebar()">Floyd Avenue</a></li>
+                    <li><a href="#" onclick="sidebar()">IZZI</a></li>
+                    <li><a href="#" onclick="sidebar()">Coding Ninjas</a></li>
+                    <li><a href="#" onclick="sidebar()">Meet the Team</a></li>
+                </ul>
+                <main id="section">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nemo nobis beatae provident, incidunt praesentium commodi ad rerum delectus unde.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ipsum quidem odit asperiores mollitia minus possimus porro. Sapiente at itaque excepturi, numquam adipisci non alias cupiditate, illo neque assumenda enim.</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti eligendi, alias consequuntur omnis unde officiis a illo fugit cum, maiores ipsam provident corrupti ipsa inventore vel iste voluptatum aliquid tempora.</p>
+                </main>
             </nav>
             <div class="logo">
                 <div class="rotator">
@@ -44,11 +54,19 @@
                 <img src="images/logo.png" alt="">
             </div>
             <div class="brands">
-                <img src="images/graffiti-hoodie.png" alt="" class="image-1">
+                <img src="images/graffiti-hoodie.png" alt="">
             </div>
         </header>
     </div>
 
-    <script src="js/main.js"></script>
+    <script>
+        function sidebar(){
+            document.getElementById("sidebar").classList.toggle('active');
+        }
+
+        function menu(){
+            document.getElementById("section").classList.toggle('toggle');
+        }
+    </script>
 </body>
 </html>
